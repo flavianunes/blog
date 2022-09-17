@@ -1,7 +1,7 @@
 ---
 title: Automated Web Accessibility Testing
 date: "2022-09-16T18:21:48.261Z"
-description: "Hello World"
+description: ""
 attachments:
   [
     {

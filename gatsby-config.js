@@ -3,13 +3,10 @@ module.exports = {
     title: `Flavia Nunes`,
     author: {
       name: `Flavia Nunes`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      summary: `Brazilian front-end software engineer passionate about user experience, accessibility, and diversity in tech.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
-    social: {
-      twitter: `kylemathews`,
-    },
+    description: `Technical blog written by Flavia Nunes, a brazilian front-end software engineer.`,
+    siteUrl: `https://flavianunes.dev/`,
   },
   plugins: [
     `gatsby-plugin-image`,

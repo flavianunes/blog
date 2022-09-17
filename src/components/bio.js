@@ -42,11 +42,7 @@ const Bio = () => {
         quality={95}
         alt="Profile picture"
       />
-      {author?.name && (
-        <p>
-          Written by <strong>{author.name}</strong> {author?.summary || null}
-        </p>
-      )}
+      {author?.name && <p>{author?.summary || null}</p>}
     </div>
   )
 }

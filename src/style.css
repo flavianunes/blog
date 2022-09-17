@@ -356,6 +356,10 @@ a:focus {
   margin-bottom: var(--spacing-0);
 }
 
+.disclaimer {
+  font-size: var(--fontSize-0);
+}
+
 /* Media queries */
 
 @media (max-width: 42rem) {
