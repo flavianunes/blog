@@ -15,9 +15,7 @@ attachments:
   ]
 ---
 
-Web accessibility (often abbreviated to A11y) means that websites and web applications are accessible for all people, whether disabled or not, and follow web development standards. The ideal is to test accessibility early and throughout the development process, so problems can be indentified and fixex as soon as possible.
-
-When developing or redesigning a website or web application, evaluate accessibility early and throughout the development process to identify accessibility problems early, when it is easier to address them.
+Web accessibility (often abbreviated to A11y) means that websites and web applications are accessible for all people, whether disabled or not, and follow web development standards. The ideal is to test accessibility early and throughout the development process, so problems can be indentified and fixed as soon as possible.
 
 There's two categories to accessibility evaluation: manual/human evaluation and automated evaluation. **Automated evaluation** can check for form labels, color contrast, focus menagement, and others. **Human/manual evaluation** can check for focus order, alternative text quality, screen readers support, and others.
 
