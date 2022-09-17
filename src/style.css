@@ -54,12 +54,12 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: #005b99;
+  --color-primary: #008080;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
   --color-heading: #1a202c;
   --color-heading-black: black;
-  --color-accent: #d1dce5;
+  --color-accent: #f5f2f0;
 }
 
 /* HTML elements */
@@ -81,10 +81,6 @@ body {
   font-family: var(--font-body);
   font-size: var(--fontSize-1);
   color: var(--color-text);
-}
-
-footer {
-  padding: var(--spacing-6) var(--spacing-0);
 }
 
 hr {
@@ -288,7 +284,7 @@ a:focus {
 
 .bio {
   display: flex;
-  margin-bottom: var(--spacing-16);
+  margin: var(--spacing-10) var(--spacing-0);
 }
 
 .bio p {
@@ -311,12 +307,53 @@ a:focus {
   font-family: var(--font-heading);
 }
 
+.blog-post-nav {
+  margin: var(--spacing-10) var(--spacing-0);
+}
+
 .blog-post-nav ul {
   margin: var(--spacing-0);
 }
 
+.blog-post-nav ul li {
+  border: 1px solid var(--color-primary);
+}
+
+.blog-post-nav ul li a {
+  text-decoration: none;
+  padding: 6px 8px;
+  display: inline-block;
+}
+
 .gatsby-highlight {
   margin-bottom: var(--spacing-8);
+}
+
+.attachments {
+  margin: var(--spacing-10) var(--spacing-0);
+}
+
+.attachments p {
+  margin-bottom: 0;
+  background-color: var(--color-accent);
+  padding: 0.5rem 0.6rem;
+}
+
+.attachments p svg {
+  width: 1.3em;
+  height: 1.3em;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.attachments ul {
+  margin: 0;
+  list-style: none;
+}
+
+.attachments ul li {
+  padding: var(--spacing-3) var(--spacing-0) var(--spacing-0) var(--spacing-3);
+  margin-bottom: var(--spacing-0);
 }
 
 /* Media queries */

@@ -1,9 +1,7 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import { Bio, Layout, Seo, Attachments } from "@components"
 
 const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
@@ -28,7 +26,20 @@ const BlogPostTemplate = ({
         />
         <hr />
         <footer>
+          <Attachments attachments={post.frontmatter.attachments} />
+          <hr />
           <Bio />
+          <p class="disclaimer">
+            Something wrong with the article?
+            <a
+              href="https://github.com/flavianunes/blog/issues"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Make your contribuition to improve it.
+            </a>
+          </p>
+          <hr />
         </footer>
       </article>
       <nav className="blog-post-nav">
@@ -44,14 +55,14 @@ const BlogPostTemplate = ({
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
+                {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
               <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
+                {next.frontmatter.title}
               </Link>
             )}
           </li>
@@ -91,6 +102,10 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        attachments {
+          link
+          title
+        }
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {

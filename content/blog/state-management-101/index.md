@@ -1,6 +1,6 @@
 ---
-title: Hello World
-date: "2015-05-01T22:12:03.284Z"
+title: State Management 101
+date: "2022-09-16T18:21:48.261Z"
 description: "Hello World"
 attachments: [{ title: "teste", link: "google.com" }]
 ---

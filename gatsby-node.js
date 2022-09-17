@@ -106,10 +106,28 @@ exports.createSchemaCustomization = ({ actions }) => {
       title: String
       description: String
       date: Date @dateformat
+      attachments: [Attachment]
+    }
+
+    type Attachment {
+      title: String
+      link: String
     }
 
     type Fields {
       slug: String
     }
   `)
+}
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      alias: {
+        "@components": path.resolve(__dirname, "src/components"),
+        "@static": path.resolve(__dirname, "static"),
+        "@queries": path.resolve(__dirname, "src/queries"),
+      },
+    },
+  })
 }
