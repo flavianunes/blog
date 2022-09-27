@@ -21,6 +21,14 @@ There's two categories to accessibility evaluation: manual/human evaluation and 
 
 There are tools to assist with automated evaluation, but it's important to note that human/manual evaluation, including user testing with people with disabilities, is required to determine if a website is accessible.
 
+## Manual accessibility testing
+
+We can introduce a few habits to our development process that will make finding accessibility issues easier.
+
+We can get used to navigating our applications with our keyboards only, which will tell us if all of our interactive features work with a different input method. Every time we feel lost or find some unexpected behavior may indicate that we can improve that feature. To do this, remember to research the keyboard shortcuts of your chosen browser.
+
+Another habit is to turn our monitor off and use a screen reader to experience that navigation and ensure that all content is accessible.
+
 ## Automated accessibility testing
 
 For automated tests, we can check for accessibility in unit, integration, and e2e testing. An example of accessibility **unit testing** is testing a component-specific behavior. For example, if we have a toggle component that should have the state `isOpen` when has focus on a specific button. An example of accessibility **integration/e2e testing** is when we have to test a page-level behavior or when we test the color contrast across the entire page.
