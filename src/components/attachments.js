@@ -2,7 +2,7 @@ import * as React from "react"
 import { IoIosAttach } from "@react-icons/all-files/io/IoIosAttach"
 
 const Attachments = ({ attachments }) => {
-  if (attachments) {
+  if (attachments.length) {
     console.log({ attachments })
     return (
       <div className="attachments">
