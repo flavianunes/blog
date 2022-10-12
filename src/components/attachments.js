@@ -3,7 +3,6 @@ import { IoIosAttach } from "@react-icons/all-files/io/IoIosAttach"
 
 const Attachments = ({ attachments }) => {
   if (attachments.length) {
-    console.log({ attachments })
     return (
       <div className="attachments">
         <p>
@@ -20,6 +19,7 @@ const Attachments = ({ attachments }) => {
             )
           })}
         </ul>
+        <hr />
       </div>
     )
   }

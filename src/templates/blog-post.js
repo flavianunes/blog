@@ -1,13 +1,17 @@
-import * as React from "react"
+import React, { useEffect } from "react"
 import { Link, graphql } from "gatsby"
 
-import { Bio, Layout, Seo, Attachments } from "@components"
+import { Bio, Comments, Layout, Seo, Attachments } from "@components"
+import { appendComments } from "@utils/helpers"
 
-const BlogPostTemplate = ({
-  data: { previous, next, site, markdownRemark: post },
-  location,
-}) => {
+const BlogPostTemplate = ({ data }, location) => {
+  const { previous, next, site, markdownRemark: post } = data
   const siteTitle = site.siteMetadata?.title || `Title`
+  const commentBox = React.createRef()
+
+  useEffect(() => {
+    appendComments(commentBox)
+  }, [commentBox])
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -27,7 +31,36 @@ const BlogPostTemplate = ({
         <hr />
         <footer>
           <Attachments attachments={post.frontmatter.attachments} />
-          <hr />
+          <nav className="blog-post-nav">
+            <ul
+              style={{
+                display: `flex`,
+                flexWrap: `wrap`,
+                justifyContent: `space-between`,
+                listStyle: `none`,
+                padding: 0,
+              }}
+            >
+              <li>
+                {previous && (
+                  <Link to={previous.fields.slug} rel="prev">
+                    {previous.frontmatter.title}
+                  </Link>
+                )}
+              </li>
+              <li>
+                {next && (
+                  <Link to={next.fields.slug} rel="next">
+                    {next.frontmatter.title}
+                  </Link>
+                )}
+              </li>
+            </ul>
+          </nav>
+          <section id="comments" className="segment comments">
+            <h3>Comments</h3>
+            <Comments commentBox={commentBox} />
+          </section>
           <Bio />
           <p class="disclaimer">
             Something wrong with the article?
@@ -36,38 +69,12 @@ const BlogPostTemplate = ({
               target="_blank"
               rel="noreferrer"
             >
-              Make your contribuition to improve it.
+              Make your contribution to improve it.
             </a>
           </p>
           <hr />
         </footer>
       </article>
-      <nav className="blog-post-nav">
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title}
-              </Link>
-            )}
-          </li>
-        </ul>
-      </nav>
     </Layout>
   )
 }
