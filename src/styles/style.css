@@ -307,6 +307,10 @@ a:focus {
   font-family: var(--font-heading);
 }
 
+.blog-post img {
+  width: 100%;
+}
+
 .blog-post-nav {
   margin: var(--spacing-10) var(--spacing-0);
 }
