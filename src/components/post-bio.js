@@ -2,18 +2,17 @@ import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
-const Bio = () => {
+const PostBio = ({ date, slug }) => {
   const data = useStaticQuery(graphql`
     query BioQuery {
       site {
         siteMetadata {
           author {
             name
-            summary
           }
-          # social {
-          #   twitter
-          # }
+          social {
+            twitter
+          }
         }
       }
     }
@@ -27,17 +26,18 @@ const Bio = () => {
     <div className="bio">
       <StaticImage
         className="bio-avatar"
-        layout="fixed"
         formats={["auto", "webp", "avif"]}
         src="../images/profile-pic.png"
-        width={50}
-        height={50}
-        quality={95}
+        width={35}
+        quality={100}
         alt="Profile picture"
       />
-      {author?.name && <p>{author?.summary || null}</p>}
+      <div className="post-bio-info">
+        <p className="author">{author?.name}</p>
+        <p>{date}</p>
+      </div>
     </div>
   )
 }
 
-export default Bio
+export default PostBio

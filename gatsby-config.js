@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Flavia Nunes | Blog de Frontend`,
+    title: `Flavia Nunes`,
     author: {
       name: `Flavia Nunes`,
       summary: `Engenheira de software frontend apaixonada por experiência do usuário, acessibilidade e diversidade na tecnologia.`,

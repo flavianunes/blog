@@ -1,22 +1,20 @@
 ---
-title: Testando Acessibilidade Web
+title: Web Accessibility Testing
 date: "2022-09-16T18:21:48.261Z"
 description: ""
 published: true
 ---
 
-**Acessibilidade na Web** (normalmente abreviada como **A11Y**) significa que aplicações web são acessíveis para todas as pessoas, com deficiência ou não, e seguem os padrões do desenvolvimento web. O ideal é testar a acessibilidade no início e durante o processo de desenvolvimento, para que problemas possam ser identificados e corrigidos o mais rápido possível.
+**Web accessibility** (often abbreviated to **A11Y**) means that websites and web applications are accessible for all people, whether disabled or not, and follow web development standards. The idea is to test accessibility early and throughout the development process, so problems can be identified and fixed as soon as possible.
 
-Existem duas categorias de testes de acessibilidade: manual e automatizado.
+There are two categories of accessibility testing: manual/human testing and automated testing.
 
-- **Testes manuais** conseguem checar se o elemento em foco é facilmente identificado, se os textos alternativos são uma boa representação das imagens, suporte à leitores de tela, entre outros itens.
-- **Testes automatizados** podem checar se os campos dos formulários possuem labels, se existe um contraste entre cores suficiente, se os cabeçalhos seguem a ordem correta, entre outros itens.
+- **Human/manual tests** can check for focus order, alternative text quality, screen readers support, and others.
+- **Automated tests** can check for form labels, color contrast, focus management, and others.
 
-Existem várias ferramentas para ajudar com os testes automatizados, mas é importante notar que testes manuais, incluindo testes com pessoas usuárias com deficiência, também são importantes para determinar o nível de acessibilidade da aplicação.
+There are tools to assist with automated tests, but it's important to note that human/manual tests, including user testing with people with disabilities, are required to determine if a website is accessible.
 
-## Teste de acessibilidade manual
-
-<!-- continuar -->
+## Manual accessibility testing
 
 Introducing a few habits to the development process helps find accessibility issues.
 

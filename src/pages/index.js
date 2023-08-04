@@ -1,6 +1,5 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-
 import { Bio, Layout, Seo } from "@components"
 
 const BlogIndex = ({ data, location }) => {
@@ -11,27 +10,21 @@ const BlogIndex = ({ data, location }) => {
     return (
       <Layout location={location} title={siteTitle}>
         <Bio />
-        <p>
-          v2.0 coming soon.
-        </p>
+        <p>v2.0 coming soon.</p>
       </Layout>
     )
   }
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Bio />
+      {/* <Bio /> */}
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
 
           return (
-            <li key={post.fields.slug}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
+            <li key={post.fields.slug} className="post-list-item">
+              <article itemScope itemType="http://schema.org/Article">
                 <header>
                   <h2>
                     <Link to={post.fields.slug} itemProp="url">
@@ -64,9 +57,7 @@ export default BlogIndex
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => (
-  <Seo title="Flavia Nunes | Frontend Engineering Blog" />
-)
+export const Head = () => <Seo title="Flavia Nunes" />
 
 export const pageQuery = graphql`
   query {
@@ -85,7 +76,7 @@ export const pageQuery = graphql`
           slug
         }
         frontmatter {
-          date(formatString: "MMMM DD, YYYY")
+          date(formatString: "DD [de]  MMMM, YYYY", locale: "pt")
           title
           description
         }

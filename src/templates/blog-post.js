@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import { Link, graphql } from "gatsby"
 
-import { Bio, Comments, Layout, Seo } from "@components"
+import { PostBio, Comments, Layout, Seo } from "@components"
 import { appendComments } from "@utils/helpers"
 
 const BlogPostTemplate = ({ data }, location) => {
@@ -22,7 +22,8 @@ const BlogPostTemplate = ({ data }, location) => {
       >
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+          <p>{post.frontmatter.description}</p>
+          <PostBio date={post.frontmatter.date} slug={post.fields.slug} />
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -30,7 +31,7 @@ const BlogPostTemplate = ({ data }, location) => {
         />
         <hr />
         <footer>
-          <nav className="blog-post-nav">
+          {/* <nav className="blog-post-nav">
             <ul
               style={{
                 display: `flex`,
@@ -55,20 +56,19 @@ const BlogPostTemplate = ({ data }, location) => {
                 )}
               </li>
             </ul>
-          </nav>
+          </nav> */}
           <section id="comments" className="segment comments">
-            <h3>Comments</h3>
             <Comments commentBox={commentBox} />
           </section>
-          <Bio />
+
           <p class="disclaimer">
-            Something wrong with the article?
+            Encontrou algo errado?{" "}
             <a
               href="https://github.com/flavianunes/blog/issues"
               target="_blank"
               rel="noreferrer"
             >
-              Make your contribution to improve it.
+              Deixe uma contribuição para melhorar.
             </a>
           </p>
           <hr />
@@ -106,9 +106,11 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "DD [de]  MMM, YYYY", locale: "pt")
         description
-        cover
+      }
+      fields {
+        slug
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {

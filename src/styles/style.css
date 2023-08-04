@@ -27,7 +27,7 @@
   --spacing-20: 5rem;
   --spacing-24: 6rem;
   --spacing-32: 8rem;
-  --fontFamily-sans: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
+  --fontFamily-sans: "SF Compact Display", Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --fontFamily-serif: "Merriweather", "Georgia", Cambria, "Times New Roman",
@@ -45,21 +45,20 @@
   --lineHeight-tight: 1.1;
   --lineHeight-normal: 1.5;
   --lineHeight-relaxed: 1.625;
-  /* 1.200 Minor Third Type Scale */
-  --fontSize-0: 0.833rem;
-  --fontSize-1: 1rem;
-  --fontSize-2: 1.2rem;
-  --fontSize-3: 1.44rem;
-  --fontSize-4: 1.728rem;
-  --fontSize-5: 2.074rem;
-  --fontSize-6: 2.488rem;
+  --fontSize-0: 0.6rem;
+  --fontSize-1: 0.8rem;
+  --fontSize-2: 1rem;
+  --fontSize-3: 1.2rem;
+  --fontSize-4: 1.375rem;
+  --fontSize-5: 1.625rem;
+  --fontSize-6: 2rem;
   --fontSize-7: 2.986rem;
   --color-primary: #008080;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
-  --color-heading: #1a202c;
+  --color-heading: #303541;
   --color-heading-black: black;
-  --color-accent: #f5f2f0;
+  --color-accent: #c9c6c4;
 }
 
 /* HTML elements */
@@ -79,7 +78,7 @@ html {
 
 body {
   font-family: var(--font-body);
-  font-size: var(--fontSize-1);
+  font-size: var(--fontSize-2);
   color: var(--color-text);
 }
 
@@ -114,7 +113,7 @@ h6 {
 }
 
 h1 {
-  font-weight: var(--fontWeight-black);
+  font-weight: var(--fontWeight-bold);
   font-size: var(--fontSize-6);
   color: var(--color-heading-black);
 }
@@ -127,7 +126,7 @@ h3 {
   font-size: var(--fontSize-4);
 }
 
-h4 {
+h4, .h4 {
   font-size: var(--fontSize-3);
 }
 
@@ -167,7 +166,7 @@ ul,
 ol {
   margin-left: var(--spacing-0);
   margin-right: var(--spacing-0);
-  padding: var(--spacing-0);
+  padding-left: var(--spacing-4);
   margin-bottom: var(--spacing-8);
   list-style-position: outside;
   list-style-image: none;
@@ -258,6 +257,8 @@ a:focus {
 .post-list-item {
   margin-bottom: var(--spacing-8);
   margin-top: var(--spacing-8);
+  display: flex;
+  gap: var(--spacing-4);
 }
 
 .post-list-item p {
@@ -294,8 +295,25 @@ a:focus {
 .bio-avatar {
   margin-right: var(--spacing-4);
   margin-bottom: var(--spacing-0);
-  min-width: 50px;
+  /* min-width: 50px; */
   border-radius: 100%;
+}
+
+.bio {
+  border-bottom: 0.5px solid var(--color-accent);
+  border-top: 0.5px solid var(--color-accent);
+  padding: var(--spacing-4) 0;
+}
+
+.bio .post-bio-info p {
+  font-size: var(--fontSize-0);
+  font-weight: var(--fontWeight-medium);
+  text-transform: uppercase;
+}
+
+.bio .post-bio-info .author {
+  font-size: var(--fontSize-0);
+  font-weight: var(--fontWeight-bold);
 }
 
 .blog-post header h1 {
@@ -330,7 +348,7 @@ a:focus {
 }
 
 .disclaimer {
-  font-size: var(--fontSize-0);
+  font-size: var(--fontSize-1);
 }
 
 /* Media queries */
