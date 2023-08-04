@@ -329,33 +329,6 @@ a:focus {
   margin-bottom: var(--spacing-8);
 }
 
-.attachments {
-  margin: var(--spacing-10) var(--spacing-0);
-}
-
-.attachments p {
-  margin-bottom: 0;
-  background-color: var(--color-accent);
-  padding: 0.5rem 0.6rem;
-}
-
-.attachments p svg {
-  width: 1.3em;
-  height: 1.3em;
-  vertical-align: middle;
-  display: inline-block;
-}
-
-.attachments ul {
-  margin: 0;
-  list-style: none;
-}
-
-.attachments ul li {
-  padding: var(--spacing-3) var(--spacing-0) var(--spacing-0) var(--spacing-3);
-  margin-bottom: var(--spacing-0);
-}
-
 .disclaimer {
   font-size: var(--fontSize-0);
 }

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import { Link, graphql } from "gatsby"
 
-import { Bio, Comments, Layout, Seo, Attachments } from "@components"
+import { Bio, Comments, Layout, Seo } from "@components"
 import { appendComments } from "@utils/helpers"
 
 const BlogPostTemplate = ({ data }, location) => {
@@ -30,7 +30,6 @@ const BlogPostTemplate = ({ data }, location) => {
         />
         <hr />
         <footer>
-          <Attachments attachments={post.frontmatter.attachments} />
           <nav className="blog-post-nav">
             <ul
               style={{
@@ -109,10 +108,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
-        attachments {
-          link
-          title
-        }
+        cover
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {

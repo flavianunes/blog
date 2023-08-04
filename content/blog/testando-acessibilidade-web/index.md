@@ -2,18 +2,7 @@
 title: Testando Acessibilidade Web
 date: "2022-09-16T18:21:48.261Z"
 description: ""
-published: false
-attachments:
-  [
-    {
-      title: "Evaluating Web Accessibility by W3C",
-      link: "https://www.w3.org/WAI/test-evaluate/",
-    },
-    {
-      title: "Accessibility by MDN Web Docs",
-      link: "https://developer.mozilla.org/en-US/docs/Web/Accessibility",
-    },
-  ]
+published: true
 ---
 
 **Acessibilidade na Web** (normalmente abreviada como **A11Y**) significa que aplicações web são acessíveis para todas as pessoas, com deficiência ou não, e seguem os padrões do desenvolvimento web. O ideal é testar a acessibilidade no início e durante o processo de desenvolvimento, para que problemas possam ser identificados e corrigidos o mais rápido possível.

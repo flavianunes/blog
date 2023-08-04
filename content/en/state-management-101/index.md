@@ -1,7 +1,6 @@
 ---
 title: State Management 101
 date: "2022-11-01T13:02:17.137Z"
-attachments: []
 ---
 
 A state is data that represents the system/application at a certain time. For example, if you have an accordion component and one of its items is open, at this certain time, the state that handles if your item is open or closed is set to `open`. However this changes when a click event is triggered, and now your state is `closed`. Dealing with front-end applications, there are different types of states we deal with.

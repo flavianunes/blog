@@ -2,7 +2,6 @@
 title: Design Systems from a Software Engineer perspective
 date: "2022-10-11T16:41:33.741Z"
 description: ""
-attachments: []
 ---
 
 Building interfaces it's part of frontend engineers job. You most likely interact with the design team, and that interaction can come with some challenges for both sides, but a Design System can help with some of those challenges.
