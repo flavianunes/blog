@@ -12,9 +12,7 @@ const BlogIndex = ({ data, location }) => {
       <Layout location={location} title={siteTitle}>
         <Bio />
         <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
+          v2.0 coming soon.
         </p>
       </Layout>
     )
@@ -66,7 +64,9 @@ export default BlogIndex
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="Flavia Nunes | Frontend Engineering Blog" />
+export const Head = () => (
+  <Seo title="Flavia Nunes | Frontend Engineering Blog" />
+)
 
 export const pageQuery = graphql`
   query {
@@ -75,7 +75,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { published: { eq: true } } }
+    ) {
       nodes {
         excerpt
         fields {

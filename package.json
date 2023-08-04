@@ -1,12 +1,9 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "flavia-nunes-blog",
   "private": true,
   "description": "A starter for a blog powered by Gatsby and Markdown",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
+  "version": "2.0.0",
+  "author": "Flavia Nunes <contato@flavianunes.dev>",
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
     "gatsby": "^4.23.0",
@@ -34,14 +31,15 @@
     "eslint-import-resolver-alias": "^1.1.2",
     "prettier": "^2.7.1"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://flavianunes.dev/",
   "keywords": [
-    "gatsby"
+    "blog",
+    "frontend"
   ],
-  "license": "0BSD",
+  "license": "GNU",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/flavianunes/blog.git"
   },
   "scripts": {
     "build": "gatsby build",
