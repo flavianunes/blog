@@ -8,7 +8,7 @@ function appendComments(commentBox) {
   commentScript.setAttribute("id", "utterances")
   commentScript.setAttribute("theme", "github-light")
   commentScript.setAttribute("crossorigin", "anonymous")
-  commentScript.setAttribute("label", "comments ✨💬✨")
+  commentScript.setAttribute("label", "comentários")
 
   if (commentBox && commentBox.current) {
     commentBox.current.appendChild(commentScript)

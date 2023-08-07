@@ -7,7 +7,7 @@ module.exports = {
     title: `Flavia Nunes`,
     author: {
       name: `Flavia Nunes`,
-      summary: `Brazilian front-end software engineer passionate about user experience, accessibility, and diversity in tech.`,
+      summary: `Engenheira de software frontend apaixonada por experiência do usuário, acessibilidade e diversidade na tecnologia.`,
     },
     description: `Technical blog written by Flavia Nunes, a brazilian front-end software engineer.`,
     siteUrl: `https://flavianunes.dev/`,
@@ -84,6 +84,7 @@ module.exports = {
               {
                 allMarkdownRemark(
                   sort: { order: DESC, fields: [frontmatter___date] },
+                  filter: { frontmatter: { published: { eq: true } } }
                 ) {
                   nodes {
                     excerpt
